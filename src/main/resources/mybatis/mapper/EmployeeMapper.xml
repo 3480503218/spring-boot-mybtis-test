@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhm.mapper.EmployeeMapper">
+    <select id="getEmp" resultType="com.dhm.bean.Employee">
+    select * from Employee where id = #{id}
+  </select>
+    <insert id="InsertEmp">
+        insert into employee(id,lastName,email,gender,d_id) values(#{id},#{lastName},#{email},#{gender},#{dId})
+    </insert>
+</mapper>
